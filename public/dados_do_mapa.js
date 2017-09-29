@@ -2,7 +2,6 @@ require([
     'dojo/text!./dados_do_mapa.csv',
     'dojo/string'], function (dados,string) {
 
-
         //the map
         var map;
 
@@ -104,5 +103,7 @@ require([
                 });
             }//else
         });//forEach de plotagem
+
+        return map;
                                             
  });

@@ -8,39 +8,62 @@
     <meta http-equiv='expires' content='0'>
     <meta http-equiv='pragma' content='no-cache'>
 
-    <style>
-       #map {
-        height: 500px;
-        width: 100%;
-       }
-    </style>    
-    <script src="http://ajax.googleapis.com/ajax/libs/dojo/1.12.1/dojo/dojo.js"></script>
-    <script>      
+    <link rel="stylesheet" href="./css/common.css" media="screen">
+    <link rel="stylesheet" href="./css/style.css" media="screen">
+    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/dojo/1.10.4/dijit/themes/claro/claro.css" media="screen">    
+
+    <script>
       function initMap() {
-         require(["dados_do_mapa.js"]);
-         
-        //locais.forEach(function(local){
-        //  console.log(local);
-        //});
+         map = require(["dados_do_mapa.js"]);
+         console.log(map);
       }
     </script>
-
-  </head>
-  
-  <body>
-    <table>
-      <tr>
-        <td><img src="./img/logo.jpg" height="80" width="50"></td>
-        <td><h2>IPGG MAPS !!!</h2></td>
-      </tr>
-    </table>
     
-    <div id="map"></div>
-
+    <script src="http://ajax.googleapis.com/ajax/libs/dojo/1.12.1/dojo/dojo.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAF4SsLUCcsaGGwVKQeGPWUQ9p-mKaA7Kw"></script>
     
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAF4SsLUCcsaGGwVKQeGPWUQ9p-mKaA7Kw&callback=initMap">
+    <script>
+         require(["dojo/parser",
+                  "dijit/layout/BorderContainer",
+                  "dijit/layout/ContentPane", "dojo/domReady!"],
+                   function(parser){        
+	              parser.parse();
+                      initMap();
+         });
     </script>
-   
+  </head>
+
+  
+  <body class="claro">  
+    <div id="appLayout" class="appLayout" data-dojo-type="dijit/layout/BorderContainer"  data-dojo-props="design: 'headline'">
+
+      <!-- Top -->
+      <div data-dojo-props="region: 'top'"
+           id="topPanel"
+           class="topPanel"
+           data-dojo-type="dijit/layout/ContentPane">
+        <table id="tableTopPanel">
+          <tr>
+            <td><img src="./img/logo.jpg" height="40" width="25"></td>
+            <td><h3>IPGG MAPS !!!</h3></td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- CENTER -->
+      <div data-dojo-props="region: 'center'"
+           class="centerPanel" data-dojo-type="dijit/layout/ContentPane">
+          <div id="map"></div>       
+      </div>
+
+      <!-- LEFT -->
+      <div data-dojo-props="region: 'left', splitter: true"
+           id="leftCol" class="edgePanel"
+           data-dojo-type="dijit/layout/ContentPane">
+       Opcoes para intagir com o mapa 
+        
+      </div>      
+    </div>
+    
   </body>
 </html>

@@ -25,6 +25,7 @@ appExpress.get('/', function(req, res){
     res.sendFile(__dirname + '/index.html');
 });
 
+
 var onChatMsg = function(msg){
     console.log(msg);
     io.emit('chatMsg', msg);

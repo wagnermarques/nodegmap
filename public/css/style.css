@@ -1,0 +1,36 @@
+/* Any demo specific styling needed for this tutorial only */
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+}
+
+#appLayout {
+    height: 100%;
+}
+#leftCol {
+    width: 8em;
+}
+#topPanel {
+    height: 8%;
+    background-color: white;
+    overflow: hidden;
+}
+#tableTopPanel {
+    border :blue;
+    height:10%;
+}
+.claro .appLayout .topPanel {
+    background-color: #edf0f7;
+}
+
+#viewsChart {
+	width: 150px;
+	height: 550px;
+}
+
+#map {
+    height: 100%;
+    width: 100%;
+}

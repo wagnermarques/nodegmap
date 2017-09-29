@@ -1,17 +1,17 @@
-NOME DA UNIDADE;ENDEREÇO;lat;lgn
-Unidade Básica de Saúde VILA PROGRESSO;R. Real Horto, 115 - Vila Progresso (Zona Leste), São Paulo - SP, 08245-260;-23.5149433;-46.432871999999975
-Unidade Básica de Saúde VILA JACUI;R. Édipo Felíciano, 165 - Vila Jacui, São Paulo - SP, 08060-220;-23.5025625;-46.45004030000001
-Programa Acompanhante de Idosos - Vila Jacuí;Rua Édipo Feliciano, 51, Vila Jacui, São Paulo - SP, 08060-220;;
-Unidade Básica de Saúde JARDIM DAS CAMELIAS;R. Trevo de Santa Maria, 79 - Jardim das Camelias, São Paulo - SP, 08050-570;;
- Assistência Médica Ambulatorial/Unidade Básica de Saúde Integrada JARDIM HELENA;Av. Kumaki Aoki, 785 - Jardim Helena, São Paulo - SP, 08090-370;;
- Assistência Médica Ambulatorial/Unidade Básica de Saúde Integrada SITIO DA CASA PINTADA;RUA MARIA SANTANA, 101 VILA JACUI;;
- Assistência Médica Ambulatorial/Unidade Básica de Saúde Integrada PARQUE PAULSITANO;R. Silveira Píres, 265 - Parque Paulistano, São Paulo - SP, 08080-160;;
-Estratégia Saúde da Família (UBS) CIDADE NOVA SÃO MIGUEL;Av. Moacir Dantas Itapicuru, 1008 - Cidade Nova São Miguel, São Paulo - SP, 08042-290;;
-Estratégia Saúde da Família (UBS) CIDADE PEDRO JOSE NUNES;R. José Bargas, 143 - Vila Jacui, São Paulo - SP, 08061-245;;
-Estratégia Saúde da Família (UBS) DR THERSIO VENTURA;R. Arraial de Santa Bárbara, 996 - Vila Jacui, São Paulo - SP, 08061-360;;
-Estratégia Saúde da Família (UBS) JARDIM LAPENNA;RUA SERRA DA JURUOCA,36, Jardim Lapena;;
-Estratégia Saúde da Família (UBS) JARDIM MAIA;RUA MARFIM VEGETAL, 108 - JARDIM MAIA;;
-Estratégia Saúde da Família (UBS) NITRO OPERÁRIA - DR PAULO FELDMAN;RUA CUMARU, 14 - SÃO MIGUEL PAULISTA;;
-Estratégia Saúde da Família (UBS) SANTA INES; RUA FREI FIDELIS MOTA, 1001, SÃO MIGUEL PAULISTA;;
-Estratégia Saúde da Família (UBS) UNIÃO DE VILA NOVA;RUA RIO CINCO VOLTAS, 205, UNIÃO DE VILA NOVA;;
-Unidade Básica de Saúde VILA ITAIM;RUA RIO MANUEL ALVES, 35 - VILA ITAIM ;;
+NOME DA UNIDADE;ENDEREÇO;lat;lng;tipo;cor;site
+Unidade Básica de Saúde VILA PROGRESSO;R. Real Horto, 115 - Vila Progresso (Zona Leste), São Paulo - SP, 08245-260;-23.514.943;-46.432.872;UBS Tradicional;azul escuro;
+Unidade Básica de Saúde VILA JACUI;R. Édipo Felíciano, 165 - Vila Jacui, São Paulo - SP, 08060-220;-23.502.562;-46.450.040;UBS Tradicional;azul escuro;
+Programa Acompanhante de Idosos - Vila Jacuí;Rua Édipo Feliciano, 51, Vila Jacui, São Paulo - SP, 08060-220;-23.501.688;-46.449.687;PAI;azul claro;
+Unidade Básica de Saúde JARDIM DAS CAMELIAS;R. Trevo de Santa Maria, 79 - Jardim das Camelias, São Paulo - SP, 08050-570;-23.520.203;-46.461.692;UBS Tradicional;azul escuro;
+ Assistência Médica Ambulatorial/Unidade Básica de Saúde Integrada JARDIM HELENA;Av. Kumaki Aoki, 785 - Jardim Helena, São Paulo - SP, 08090-370;-23.479.260;-46.419.651;AMA Integrado;verde escuro;
+ Assistência Médica Ambulatorial/Unidade Básica de Saúde Integrada SITIO DA CASA PINTADA;RUA MARIA SANTANA, 101 VILA JACUI;-23.510.126;-46.446.666;AMA Integrado;verde escuro;
+ Assistência Médica Ambulatorial/Unidade Básica de Saúde Integrada PARQUE PAULSITANO;R. Silveira Píres, 265 - Parque Paulistano, São Paulo - SP, 08080-160;-23.487.152;-46.432.177;AMA Integrado;verde escuro;
+Estratégia Saúde da Família (UBS) CIDADE NOVA SÃO MIGUEL;Av. Moacir Dantas Itapicuru, 1008 - Cidade Nova São Miguel, São Paulo - SP, 08042-290;-23.504.887;-46.433.537;ESF/UBS;vermelho;
+Estratégia Saúde da Família (UBS) CIDADE PEDRO JOSE NUNES;R. José Bargas, 143 - Vila Jacui, São Paulo - SP, 08061-245;-23.501.140;-46.461.397;ESF/UBS;vermelho;
+Estratégia Saúde da Família (UBS) DR THERSIO VENTURA;R. Arraial de Santa Bárbara, 996 - Vila Jacui, São Paulo - SP, 08061-360;-23.504.096;-46.470.656;ESF/UBS;vermelho;
+Estratégia Saúde da Família (UBS) JARDIM LAPENNA;RUA SERRA DA JURUOCA,36, Jardim Lapena;-23.488.345;-46.448.042;ESF/UBS;vermelho;
+Estratégia Saúde da Família (UBS) JARDIM MAIA;RUA MARFIM VEGETAL, 108 - JARDIM MAIA;-23.492.223;-46.415.971;ESF/UBS;vermelho;
+Estratégia Saúde da Família (UBS) NITRO OPERÁRIA - DR PAULO FELDMAN;RUA CUMARU, 14 - SÃO MIGUEL PAULISTA;-23.494.106;-46.436.422;ESF/UBS;vermelho;
+Estratégia Saúde da Família (UBS) SANTA INES; RUA FREI FIDELIS MOTA, 1001, SÃO MIGUEL PAULISTA;-23.492.510;-46.459.468;ESF/UBS;vermelho;
+Estratégia Saúde da Família (UBS) UNIÃO DE VILA NOVA;RUA CATLÉIAS, 205, UNIÃO DE VILA NOVA, São Paulo - SP;-23.483.812;-46.459.015;ESF/UBS;vermelho;
+Unidade Básica de Saúde VILA ITAIM;RUA RIO MANUEL ALVES, 35 - VILA ITAIM ;-23.484.720;-46.394.980;UBS Tradicional;azul escuro;
