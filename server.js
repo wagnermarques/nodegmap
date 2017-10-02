@@ -1,6 +1,8 @@
 
 var express = require('express');
 var appExpress = express();
+var path = require("path");
+var fs = require("fs");
 
 var http = require('http').Server(appExpress);
 var io = require('socket.io')(http);
@@ -14,8 +16,26 @@ var io = require('socket.io')(http);
 * use no html da seguinte maneira (jquery-3.1.1.min.js na pasta /public)
 * <script src="jquery-3.1.1.min.js"></script>
 */
+
+//target = path.join(path.resolve('public'), 'node_modules');
+//if (!fs.existsSync(target)) {
+//    fs.mkdirSync(target);//
+//}
+
+//appExpress.use(express.static(__dirname + '/node_modules'));
+appExpress.use('/libraries', express.static('node_modules'));
 appExpress.use(express.static(__dirname + '/public'));
 
+//var dojo_dir = require.resolve('dojo')
+//    .match(/.*\/node_modules\/[^/]+\//)[0];
+
+//console.log(dojo_dir);
+
+
+
+//appExpress.use(express.static(__dirname + '/node_modules/dojo'));
+//appExpress.use(express.static(__dirname + '/node_modules/dijit'));
+//appExpress.use(express.static(__dirname + '/node_modules/dojox'));
 
 //appExpress.set('PORT', 3000);
 
