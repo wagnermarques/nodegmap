@@ -4,7 +4,6 @@ require([
 
         //the map
         var map;
-
         
         //PLOTANDO O IPGG
         LatLngIpgg = {lat: -23.4918588, lng: -46.44605790000003};
@@ -28,12 +27,13 @@ require([
         });
         map = new google.maps.Map(document.getElementById('map'), {
             center: LatLngIpgg,
-            zoom: 12
+            zoom: 12,            
         });    
         var marker = new google.maps.Marker({
             position: LatLngIpgg,
             map: map
         });
+        marker.setIcon('img/mapIcon.jpg');
         marker.addListener('click', function() {
             infowindow.open(map, marker);
         });
@@ -62,7 +62,10 @@ require([
                 dadosDoLocal.longitude = longitudeF;
                 position = {lat: latitudeF, lng: longitudeF};
                 dadosDoLocal.position = position;
-            }            
+            }
+
+            dadosDoLocal.tipo = aRowColumns[4];
+            dadosDoLocal.cor =  aRowColumns[5];
             locais.push(dadosDoLocal);
         });//rows.forEach
         
@@ -98,6 +101,27 @@ require([
                     position: {lat: local.latitude, lng: local.longitude},
                     map: map
                 });
+
+                console.log(local.cor);
+                if(new String(local.cor).valueOf() === new String("azul escuro").valueOf()){
+                    marker.setIcon('img/azul-escuro-ubs-tradicional.png');
+                }
+                
+                if(local.cor.trim() == "azul escuro".trim()){
+                    marker.setIcon('img/azul-escuro-ubs-tradicional.png');
+                }
+
+                if(new String(local.cor).valueOf() == new String('azul claro').valueOf()){
+                    marker.setIcon('img/azul-claro-pai.png');
+                }
+                if(new String(local.cor).valueOf() == new String('vermelho').valueOf()){
+                    marker.setIcon('img/vermelho-esf-ubs.png');
+                }
+                if(new String(local.cor).valueOf() == new String( 'verde escuro').valueOf()){
+                    marker.setIcon('img/verde-escuro-ama-integrado.png');
+                }
+                
+                
                 marker.addListener('click', function() {
                     infowindow.open(map, marker);
                 });
