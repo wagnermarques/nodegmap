@@ -2,11 +2,9 @@ require([
     'dojo/text!./dados_do_mapa.csv',
     'dojo/string'], function (dados,string) {
 
-        //the map
-        var map;
-        
         //PLOTANDO O IPGG
         LatLngIpgg = {lat: -23.4918588, lng: -46.44605790000003};
+
         infoWindowContentIpgg = '<div id="content">'+
             '<div id="siteNotice">'+
             '</div>'+
@@ -39,9 +37,7 @@ require([
         });
     
 
-        //OBTENDO DADOS DOS DEMAIS LOCAIS PARA PLOTAGEM
-        var locais = new Array();
-
+        //OBTENDO DADOS DOS DEMAIS LOCAIS PARA PLOTAGEM        
         var rows = dados.split("\n");
 	rows.forEach( function getvalues(aRow) {
             dadosDoLocal={}
@@ -81,14 +77,8 @@ require([
             '</div>';
         
         locais.forEach(function(local){
-            //console.log(local.endDoLocal);
-            //console.log(local.nomeDoLocal);
-            //console.log(local.position);
-            //console.log("=============");
-            //se o local nao tiver latitude ou longitue nao plota
-            //se tiver mas for NaN tambem nao
             if(local.latitude == null || local.longitude == null || isNaN(local.position.lat) || isNaN(local.position.lng)){
-                console.log(local.nomeDoLocal +" nao pode ser plotado");
+                //console.log(local.nomeDoLocal +" nao pode ser plotado");
             }else{
                 var infowindow = new google.maps.InfoWindow({
                     content: string.substitute(infoWindowContent,
@@ -101,8 +91,8 @@ require([
                     position: {lat: local.latitude, lng: local.longitude},
                     map: map
                 });
-
-                console.log(local.cor);
+                currentMarkers.push(marker);
+                
                 if(new String(local.cor).valueOf() === new String("azul escuro").valueOf()){
                     marker.setIcon('img/azul-escuro-ubs-tradicional.png');
                 }
@@ -114,14 +104,15 @@ require([
                 if(new String(local.cor).valueOf() == new String('azul claro').valueOf()){
                     marker.setIcon('img/azul-claro-pai.png');
                 }
+
                 if(new String(local.cor).valueOf() == new String('vermelho').valueOf()){
                     marker.setIcon('img/vermelho-esf-ubs.png');
                 }
+
                 if(new String(local.cor).valueOf() == new String( 'verde escuro').valueOf()){
                     marker.setIcon('img/verde-escuro-ama-integrado.png');
                 }
-                
-                
+                                
                 marker.addListener('click', function() {
                     infowindow.open(map, marker);
                 });

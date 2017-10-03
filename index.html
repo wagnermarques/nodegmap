@@ -25,8 +25,16 @@
          dijit: '/libraries/dijit',
          dojox: '/libraries/dojox'
         },
-      deps: ['dijit/layout/BorderContainer',
+      deps: [
+      'dijit/registry',
       'dijit/layout/ContentPane',
+      'dijit/layout/BorderContainer',
+      'dijit/WidgetSet', // for registry.byClass
+      'dijit/Menu',
+      'dijit/MenuItem',
+      'dijit/MenuBar',
+      'dijit/MenuBarItem',
+      'dijit/MenuItem',      
       'dojo/domReady!']
       };
     </script>
@@ -34,9 +42,14 @@
     <script src="/libraries/dojo/dojo.js"></script>    
 
     <script>
+
+      var map;
+      var locais = new Array();
+      var currentMarkers = new Array();
+      
       function initMap() {
-         map = require(["dados_do_mapa.js"]);
-         console.log(map);
+        map = require(["dados_do_mapa.js"]);
+        require(["menu_events_handler.js"]);
       }
     </script>
     
@@ -64,6 +77,29 @@
           <tr>
             <td><img src="./img/logo.jpg" height="40" width="25"></td>
             <td><h3>IPGG MAPS !!!</h3></td>
+            <td>
+
+              <div id="mainMenu" data-dojo-type="dijit/MenuBar">
+	        <div id="popupMenuBarItem" data-dojo-type="dijit/PopupMenuBarItem">
+		  <span>Editar</span>
+		  <div id="editarMenu" data-dojo-type="dijit/Menu">
+                    <div id="mnuItem_VerSoOIpgg"
+		         data-dojo-type="dijit/MenuItem">Ver so o IPGG</div>
+                    <div id="mnuItem_VerTodos"
+		         data-dojo-type="dijit/MenuItem">Ver todos os Locais</div>
+		    <div id="mnuItem_SelecionarLocaisPorCategorias"
+		         data-dojo-type="dijit/MenuItem">Selecionar Locais por categorias</div>
+                    <div id="mnuItem_SelecionarLocaisPorRegiao"
+		         data-dojo-type="dijit/MenuItem">Selecionar Locais por Regiao</div>	            
+		    <div id="mnuItem_VerListaDeLocais"
+		         data-dojo-type="dijit/MenuItem">Ver Lista de Locais</div>
+		  </div>
+	        </div><!-- end of sub-menu -->
+
+                <div id="mnBarItem_Sobre"
+	             data-dojo-type="dijit/MenuBarItem">Sobre</div>
+              </div>            
+            </td>
           </tr>
         </table>
       </div>
