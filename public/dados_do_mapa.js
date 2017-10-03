@@ -73,6 +73,7 @@ require([
             '<h1 id="firstHeading" class="firstHeading">${nome}</h1>'+
             '<div id="bodyContent">'+
             '<p>${endereco}<p>'+
+            '<p>${tipo}</p>'+
             '</div>'+
             '</div>';
         
@@ -84,14 +85,19 @@ require([
                     content: string.substitute(infoWindowContent,
                                                {
                                                    endereco:local.endDoLocal,
-                                                   nome:local.nomeDoLocal
+                                                   nome:local.nomeDoLocal,
+                                                   tipo:local.tipo
                                                })
                 });
                 var marker = new google.maps.Marker({
                     position: {lat: local.latitude, lng: local.longitude},
                     map: map
                 });
-                currentMarkers.push(marker);
+                
+                currentMarkers.push({
+                    marcador:marker,
+                    objLocal:local
+                });
                 
                 if(new String(local.cor).valueOf() === new String("azul escuro").valueOf()){
                     marker.setIcon('img/azul-escuro-ubs-tradicional.png');
@@ -112,7 +118,61 @@ require([
                 if(new String(local.cor).valueOf() == new String( 'verde escuro').valueOf()){
                     marker.setIcon('img/verde-escuro-ama-integrado.png');
                 }
+
+                if(new String(local.cor).valueOf() == new String( 'verde claro').valueOf()){
+                    marker.setIcon('img/marron_pa.png');
+                }
                                 
+                if(new String(local.cor).valueOf() == new String( 'roxo').valueOf()){
+                    marker.setIcon('img/roxo_cecco.png');
+                }
+
+                if(new String(local.cor).valueOf() == new String( 'amarelo').valueOf()){
+                    marker.setIcon('img/amarelo_caps.png');                    
+                }
+
+                if(new String(local.cor).valueOf() == new String( 'rosa').valueOf()){
+                    marker.setIcon('img/rosa_cta.png');                    
+                }
+
+                if(new String(local.cor).valueOf() == new String( 'pink').valueOf()){
+                    marker.setIcon('img/marron_pa.png');                    
+                }
+
+                if(new String(local.cor).valueOf() == new String( 'lilas').valueOf()){
+                    marker.setIcon('img/lilas_resistencia_terapeutica.png');                    
+                }
+                
+                if(new String(local.cor).valueOf() == new String( 'cinza').valueOf()){
+                    marker.setIcon('img/cinza_suvis.png');                    
+                }
+
+                if(new String(local.cor).valueOf() == new String( 'laranja').valueOf()){
+                    marker.setIcon('img/laranja_cras.png');                    
+                }
+
+                if(new String(local.cor).valueOf() == new String( 'preto').valueOf()){
+                    marker.setIcon('img/preto_sts.png');                    
+                }
+                
+                if(new String(local.cor).valueOf() == new String( 'bege').valueOf()){
+                    marker.setIcon('img/bege_ama-e.png');                    
+                }
+
+                if(new String(local.cor).valueOf() == new String( 'branco').valueOf()){
+                    marker.setIcon('img/branco_cpn.png');                    
+                }
+
+                if(new String(local.cor).valueOf() == new String( 'vinho').valueOf()){
+                    marker.setIcon('img/vinho_nir.png');                    
+                }
+
+                if(new String(local.cor).valueOf() == new String( 'marron').valueOf()){
+                    marker.setIcon('img/vinho_nir.png');                    
+                }
+
+
+                
                 marker.addListener('click', function() {
                     infowindow.open(map, marker);
                 });
@@ -122,3 +182,4 @@ require([
         return map;
                                             
  });
+
