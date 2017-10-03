@@ -2,11 +2,9 @@ require([
     'dojo/text!./dados_do_mapa.csv',
     'dojo/string'], function (dados,string) {
 
-        //the map
-        var map;
-        
         //PLOTANDO O IPGG
         LatLngIpgg = {lat: -23.4918588, lng: -46.44605790000003};
+
         infoWindowContentIpgg = '<div id="content">'+
             '<div id="siteNotice">'+
             '</div>'+
@@ -39,9 +37,7 @@ require([
         });
     
 
-        //OBTENDO DADOS DOS DEMAIS LOCAIS PARA PLOTAGEM
-        var locais = new Array();
-
+        //OBTENDO DADOS DOS DEMAIS LOCAIS PARA PLOTAGEM        
         var rows = dados.split("\n");
 	rows.forEach( function getvalues(aRow) {
             dadosDoLocal={}
@@ -77,32 +73,32 @@ require([
             '<h1 id="firstHeading" class="firstHeading">${nome}</h1>'+
             '<div id="bodyContent">'+
             '<p>${endereco}<p>'+
+            '<p>${tipo}</p>'+
             '</div>'+
             '</div>';
         
         locais.forEach(function(local){
-            //console.log(local.endDoLocal);
-            //console.log(local.nomeDoLocal);
-            //console.log(local.position);
-            //console.log("=============");
-            //se o local nao tiver latitude ou longitue nao plota
-            //se tiver mas for NaN tambem nao
             if(local.latitude == null || local.longitude == null || isNaN(local.position.lat) || isNaN(local.position.lng)){
-                console.log(local.nomeDoLocal +" nao pode ser plotado");
+                //console.log(local.nomeDoLocal +" nao pode ser plotado");
             }else{
                 var infowindow = new google.maps.InfoWindow({
                     content: string.substitute(infoWindowContent,
                                                {
                                                    endereco:local.endDoLocal,
-                                                   nome:local.nomeDoLocal
+                                                   nome:local.nomeDoLocal,
+                                                   tipo:local.tipo
                                                })
                 });
                 var marker = new google.maps.Marker({
                     position: {lat: local.latitude, lng: local.longitude},
                     map: map
                 });
-
-                console.log(local.cor);
+                
+                currentMarkers.push({
+                    marcador:marker,
+                    objLocal:local
+                });
+                
                 if(new String(local.cor).valueOf() === new String("azul escuro").valueOf()){
                     marker.setIcon('img/azul-escuro-ubs-tradicional.png');
                 }
@@ -114,13 +110,68 @@ require([
                 if(new String(local.cor).valueOf() == new String('azul claro').valueOf()){
                     marker.setIcon('img/azul-claro-pai.png');
                 }
+
                 if(new String(local.cor).valueOf() == new String('vermelho').valueOf()){
                     marker.setIcon('img/vermelho-esf-ubs.png');
                 }
+
                 if(new String(local.cor).valueOf() == new String( 'verde escuro').valueOf()){
                     marker.setIcon('img/verde-escuro-ama-integrado.png');
                 }
+
+                if(new String(local.cor).valueOf() == new String( 'verde claro').valueOf()){
+                    marker.setIcon('img/marron_pa.png');
+                }
+                                
+                if(new String(local.cor).valueOf() == new String( 'roxo').valueOf()){
+                    marker.setIcon('img/roxo_cecco.png');
+                }
+
+                if(new String(local.cor).valueOf() == new String( 'amarelo').valueOf()){
+                    marker.setIcon('img/amarelo_caps.png');                    
+                }
+
+                if(new String(local.cor).valueOf() == new String( 'rosa').valueOf()){
+                    marker.setIcon('img/rosa_cta.png');                    
+                }
+
+                if(new String(local.cor).valueOf() == new String( 'pink').valueOf()){
+                    marker.setIcon('img/marron_pa.png');                    
+                }
+
+                if(new String(local.cor).valueOf() == new String( 'lilas').valueOf()){
+                    marker.setIcon('img/lilas_resistencia_terapeutica.png');                    
+                }
                 
+                if(new String(local.cor).valueOf() == new String( 'cinza').valueOf()){
+                    marker.setIcon('img/cinza_suvis.png');                    
+                }
+
+                if(new String(local.cor).valueOf() == new String( 'laranja').valueOf()){
+                    marker.setIcon('img/laranja_cras.png');                    
+                }
+
+                if(new String(local.cor).valueOf() == new String( 'preto').valueOf()){
+                    marker.setIcon('img/preto_sts.png');                    
+                }
+                
+                if(new String(local.cor).valueOf() == new String( 'bege').valueOf()){
+                    marker.setIcon('img/bege_ama-e.png');                    
+                }
+
+                if(new String(local.cor).valueOf() == new String( 'branco').valueOf()){
+                    marker.setIcon('img/branco_cpn.png');                    
+                }
+
+                if(new String(local.cor).valueOf() == new String( 'vinho').valueOf()){
+                    marker.setIcon('img/vinho_nir.png');                    
+                }
+
+                if(new String(local.cor).valueOf() == new String( 'marron').valueOf()){
+                    marker.setIcon('img/vinho_nir.png');                    
+                }
+
+
                 
                 marker.addListener('click', function() {
                     infowindow.open(map, marker);
@@ -131,3 +182,4 @@ require([
         return map;
                                             
  });
+

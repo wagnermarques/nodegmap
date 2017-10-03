@@ -25,8 +25,18 @@
          dijit: '/libraries/dijit',
          dojox: '/libraries/dojox'
         },
-      deps: ['dijit/layout/BorderContainer',
+      deps: [      
+      'dijit/registry',
       'dijit/layout/ContentPane',
+      'dijit/layout/BorderContainer',
+      'dijit/form/MultiSelect',
+      'dijit/WidgetSet', // for registry.byClass
+      'dijit/Menu',
+      'dijit/MenuItem',
+      'dijit/MenuBar',
+      'dijit/MenuBarItem',
+      'dijit/MenuItem',
+      'dijit/form/DropDownButton',
       'dojo/domReady!']
       };
     </script>
@@ -34,9 +44,14 @@
     <script src="/libraries/dojo/dojo.js"></script>    
 
     <script>
+
+      var map;
+      var locais = new Array();
+      var currentMarkers = new Array();
+      
       function initMap() {
-         map = require(["dados_do_mapa.js"]);
-         console.log(map);
+        map = require(["dados_do_mapa.js"]);
+        require(["menu_events_handler.js"]);
       }
     </script>
     
@@ -52,7 +67,10 @@
   </head>
 
   
-  <body class="claro">  
+  <body class="claro">
+
+    
+    
     <div id="appLayout" class="appLayout" data-dojo-type="dijit/layout/BorderContainer"  data-dojo-props="design: 'headline'">
 
       <!-- Top -->
@@ -64,6 +82,45 @@
           <tr>
             <td><img src="./img/logo.jpg" height="40" width="25"></td>
             <td><h3>IPGG MAPS !!!</h3></td>
+            <td>
+
+              <div id="mainMenu" data-dojo-type="dijit/MenuBar">
+	        <div id="popupMenuBarItem" data-dojo-type="dijit/PopupMenuBarItem">
+		  <span>Editar Mapa</span>
+		  <div id="editarMenu" data-dojo-type="dijit/Menu">
+                    <div id="mnuItem_VerSoOIpgg"
+		         data-dojo-type="dijit/MenuItem">Ver so o IPGG</div>
+                    <div id="mnuItem_VerTodos"
+		         data-dojo-type="dijit/MenuItem">Ver todos os Locais</div>
+		  </div>
+	        </div><!-- end of sub-menu -->
+                <td>
+                  <div id="dropDownButton" data-dojo-type="dijit/form/DropDownButton">
+	            <span>Selecionar por categoria</span>
+	            <div data-dojo-type="dijit/Menu">
+		      <div data-dojo-type="dijit/MenuItem" id="CAPS">CAPS</div>
+		      <div data-dojo-type="dijit/MenuItem" id="CECCO">CECCO</div>
+		      <div data-dojo-type="dijit/MenuItem" id="CTA">CTA</div>
+		      <div data-dojo-type="dijit/MenuItem" id="Hospital Dia">Hospital Dia</div>
+		      <div data-dojo-type="dijit/MenuItem" id="PA">PA</div>
+		      <div data-dojo-type="dijit/MenuItem" id="Residencia Terapeutica">Residência Terapêutica</div>
+		      <div data-dojo-type="dijit/MenuItem" id="UBS Tradicional">UBS Tradicional</div>
+		      <div data-dojo-type="dijit/MenuItem" id="SUVIS">SUVIS</div>
+		      <div data-dojo-type="dijit/MenuItem" id="STS">STS"</div>
+		      <div data-dojo-type="dijit/MenuItem" id="AMA-E">AMA-E</div>
+		      <div data-dojo-type="dijit/MenuItem" id="CPN">CPN</div>
+		      <div data-dojo-type="dijit/MenuItem" id="SAE-DST">SAE-DST</div>
+		      <div data-dojo-type="dijit/MenuItem" id="AMA Integrado">AMA Integrado</div>
+		      <div data-dojo-type="dijit/MenuItem" id="NIR">NIR</div>
+		      <div data-dojo-type="dijit/MenuItem" id="AE">AE</div>
+		      <div data-dojo-type="dijit/MenuItem" id="ESF/UBS">ESF/UBS</div>
+		      <div data-dojo-type="dijit/MenuItem" id="CRAS">CRAS</div>
+		      <div data-dojo-type="dijit/MenuItem" id="ILPI">ILPI</div>
+		      <div data-dojo-type="dijit/MenuItem" id="PAI">PAI</div>
+	            </div>
+                  </div>
+              </td>
+            </td>
           </tr>
         </table>
       </div>
@@ -81,6 +138,6 @@
        Opcoes para intagir com o mapa 
         
       </div>      
-    </div>    
+    </div>
   </body>
 </html>

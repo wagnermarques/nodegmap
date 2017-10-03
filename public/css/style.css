@@ -6,6 +6,12 @@ html, body {
     padding: 0;
 }
 
+.taskIcon {
+    background: url("./public/icons/task.png");
+    width: 24px;
+    height: 24px;
+}
+
 #appLayout {
     height: 100%;
 }
