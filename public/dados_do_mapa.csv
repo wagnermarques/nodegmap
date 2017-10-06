@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 NOME DA UNIDADE;ENDEREÇO;lat;lng;tipo;cor;site;ESPECIALIDADES
 Assistência Médica Ambulatorial - Especialidades Burgo Paulista  ;R. José Silva Alcântara Filho, 1031 - Burgo Paulista, São Paulo - SP, 03680-000;-23.523.292;-46.490.513;AMA-E;bege;;Uro, Neuro, Otorrino, Dermato, Pneumo, Angio, Cardio, Endocrino, AS, Enf., Farm 
 Centro de Práticas Naturais ERMELINO MATARAZZO - PRIMAVERA ;Rua Victória Simionato, 100 - Vila Paranaguá, São Paulo - SP, 03808-170;-23.494.490;-46.477.560;CPN;branco;;Acup., Enf., Ft, Psi
@@ -19,6 +18,21 @@ Assistência Médica Ambulatorial/Unidade Básica de Saúde Integrada JARDIM TR�
 Ambulatório de Especialidades VILA PARANAGUÁ  ;Rua José Goes Nogueira, 70 - Vila Paranagua, São Paulo - SP, 03807-380;-23.494.940;-46.474.189;AE;bege;;Clin., Gineco, Gastro, Dermato, Pediat., AS, Enf., Farm, Nut., Psi, Odonto
 Centro de Convivência e Cooperativa (CECCO) Ermelino Matarazzo  ;Alameda Rodrigo de Brum, 70 (antigo 36) - Ermelino Matarazzo, São Paulo - SP, 03649-030;-23.500.745;-46.472.900;CECCO;roxo;;AS, TO, Psi
 Estratégia Saúde da Família (UBS) JARDIM KERALUX  ;R. Lucas Gonçalves, 13 - Jardim Keralux, São Paulo - SP, 03828-060;-23.482.374;-46.493.309;ESF/UBS;vermelho;;Gener., Enf., Farm, Ft, EF, Fono, Nut., Psi, Odonto
+Unidade Básica de Saúde VILA PROGRESSO;R. Real Horto, 115 - Vila Progresso (Zona Leste), São Paulo - SP, 08245-260;-23.514.943;-46.432.872;UBS Tradicional;azul escuro;;Clin., Gineco, Gener., Enf., Farm, Psi, Odonto
+Unidade Básica de Saúde VILA JACUI ;R. Édipo Felíciano, 165 - Vila Jacui, São Paulo - SP, 08060-220;-23.502.562;-46.450.040;UBS Tradicional;azul escuro;; Clin., Gineco, AS, Enf., Farm, Odonto
+Unidade Básica de Saúde JARDIM DAS CAMELIAS ;R. Trevo de Santa Maria, 79 - Jardim das Camelias, São Paulo - SP, 08050-570;-23.520.203;-46.461.692;UBS Tradicional;azul escuro;; Clin., Gineco, Gener., AS, Enf., Farm, Odonto
+ Assistência Médica Ambulatorial/Unidade Básica de Saúde Integrada JARDIM HELENA;Av. Kumaki Aoki, 785 - Jardim Helena, São Paulo - SP, 08090-370;-23.479.260;-46.419.651;AMA Integrado;verde escuro;;Clin., Gineco, AS, Enf., Farm, Odonto
+ Assistência Médica Ambulatorial/Unidade Básica de Saúde Integrada SITIO DA CASA PINTADA ;RUA MARIA SANTANA, 101 VILA JACUI;-23.510.126;-46.446.666;AMA Integrado;verde escuro;; Clin., Gineco, Gener., AS, Enf., Farm, Odonto
+ Assistência Médica Ambulatorial/Unidade Básica de Saúde Integrada PARQUE PAULSITANO ;R. Silveira Píres, 265 - Parque Paulistano, São Paulo - SP, 08080-160;-23.487.152;-46.432.177;AMA Integrado;verde escuro;;Clin., Gineco, Enf., Farm, Odonto
+Estratégia Saúde da Família (UBS) CIDADE NOVA SÃO MIGUEL  ;Av. Moacir Dantas Itapicuru, 1008 - Cidade Nova São Miguel, São Paulo - SP, 08042-290;-23.504.887;-46.433.537;ESF/UBS;vermelho;;Gener., AS, Enf., Farm, Ft, EF, Fono, Nut., Psi
+Estratégia Saúde da Família (UBS) CIDADE PEDRO JOSE NUNES  ;R. José Bargas, 143 - Vila Jacui, São Paulo - SP, 08061-245;-23.501.140;-46.461.397;ESF/UBS;vermelho;;Gener., Enf., Farm, Odonto
+Estratégia Saúde da Família (UBS) DR THERSIO VENTURA  ;R. Arraial de Santa Bárbara, 996 - Vila Jacui, São Paulo - SP, 08061-360;-23.504.096;-46.470.656;ESF/UBS;vermelho;;Gener., Enf., Farm, Odonto
+Estratégia Saúde da Família (UBS) JARDIM LAPENNA  ;RUA SERRA DA JURUOCA,36, Jardim Lapena;-23.488.345;-46.448.042;ESF/UBS;vermelho;;Gener., Enf., Farm
+Estratégia Saúde da Família (UBS) JARDIM MAIA  ;RUA MARFIM VEGETAL, 108 - JARDIM MAIA;-23.492.223;-46.415.971;ESF/UBS;vermelho;;Clin., Psiq., Gineco, Gener., AS, Enf, Farm, Ft, EF, Fono, Nut., Psi, Odonto
+Estratégia Saúde da Família (UBS) NITRO OPERÁRIA - DR PAULO FELDMAN  ;RUA CUMARU, 14 - SÃO MIGUEL PAULISTA;-23.494.106;-46.436.422;ESF/UBS;vermelho;;Psiq., Gener., AS, Enf., Farm, Ft, EF, TO, Fono, Nut., Psi
+Estratégia Saúde da Família (UBS) SANTA INES  ; RUA FREI FIDELIS MOTA, 1001, SÃO MIGUEL PAULISTA;-23.492.510;-46.459.468;ESF/UBS;vermelho;;Gener., AS, Enf., Farm, Ft, EF, TO, Fono, Nut., Psi
+Estratégia Saúde da Família (UBS) UNIÃO DE VILA NOVA  ;RUA CATLÉIAS, 205, UNIÃO DE VILA NOVA, São Paulo - SP;-23.483.812;-46.459.015;ESF/UBS;vermelho;;Gener., Enf., Farm
+Unidade Básica de Saúde VILA ITAIM  ;RUA RIO MANUEL ALVES, 35 - VILA ITAIM ;-23.484.720;-46.394.980;UBS Tradicional;azul escuro;;Clin., Psiq., Gineco, AS, Enf., Farm, TO, Psi, Odonto
 Centro de Atenção Psicossocial Álcool Drogas II Jardim Nélia  ;RUA VALENTE DE NOVAES, 131, ITAIM PAULISTA (POR QUESTÕES DE SEGURANÇA, ESTÃO ATENDENDO PROVISORIAMENTE NESTE ENDEREÇO);-23.501.252;-46.396.645;CAPS;amarelo;;Clin., AS, Enf., Psi
 Centro de Atenção Psicossocial ADULTO II - ITAIM PAULISTA  ;R. Cembira, 992 - Vila Clara, São Paulo - SP, 08032-010;-23.504.933;-46.429.049;CAPS;amarelo;;Psiq., AS, Enf., Farm, EF, TO, Psi
 Centro de Atenção Psicossocial INFANTO JUVENIL II - ITAIM PAULISTA ;RUA ILHA DE SAO FRANCISCO, 155, Itaim Paulista;-23.498.470;-46.404.543;CAPS;amarelo;;Psiq., AS, Enf., Farm, EF, TO, Fono, Psi
@@ -44,58 +58,3 @@ Estratégia Saúde da Família (UBS) PARQUE SANTA RITA  ; R. José Pessota, 80 
 Estratégia Saúde da Família (UBS) Curuçá Velha  ;Rua Pedro Meira, 01 - São Miguel, São Paulo - SP, 08030-500;-23.502.416;-46.422.558;ESF/UBS;vermelho;;Gener., Enf., Farm, Ft, EF, TO, Fono, Nut., Psi, Odonto, ACS
 Estratégia Saúde da Família (UBS) VILA NOVA CURUÇÁ  ;R. Narceja, 51 - Vila Nova Curuçá, São Paulo - SP, 08032-340;-23.516.580;-46.426.494;ESF/UBS;vermelho;;Gener., AS, Enf., Farm, Ft, EF, TO, Fono, Nut., Psi, Odonto
 Unidade de Vigilância em Saúde ITAIM PAULISTA (FAVOR ATUALIZAR O NOME DESTA UNIDADE);R. Ererê, 260 - Vila Curuçá Velha, São Paulo - SP, 08030-400;-23.501.808;-46.424.340;SUVIS;cinza;;Sanitarista, AS, Enf., Farm, Nut., Odonto
-Unidade Básica de Saúde VILA PROGRESSO;R. Real Horto, 115 - Vila Progresso (Zona Leste), São Paulo - SP, 08245-260;-23.514.943;-46.432.872;UBS Tradicional;azul escuro;;Clin., Gineco, Gener., Enf., Farm, Psi, Odonto
-Unidade Básica de Saúde VILA JACUI ;R. Édipo Felíciano, 165 - Vila Jacui, São Paulo - SP, 08060-220;-23.502.562;-46.450.040;UBS Tradicional;azul escuro;; Clin., Gineco, AS, Enf., Farm, Odonto
-Unidade Básica de Saúde JARDIM DAS CAMELIAS ;R. Trevo de Santa Maria, 79 - Jardim das Camelias, São Paulo - SP, 08050-570;-23.520.203;-46.461.692;UBS Tradicional;azul escuro;; Clin., Gineco, Gener., AS, Enf., Farm, Odonto
- Assistência Médica Ambulatorial/Unidade Básica de Saúde Integrada JARDIM HELENA;Av. Kumaki Aoki, 785 - Jardim Helena, São Paulo - SP, 08090-370;-23.479.260;-46.419.651;AMA Integrado;verde escuro;;Clin., Gineco, AS, Enf., Farm, Odonto
- Assistência Médica Ambulatorial/Unidade Básica de Saúde Integrada SITIO DA CASA PINTADA ;RUA MARIA SANTANA, 101 VILA JACUI;-23.510.126;-46.446.666;AMA Integrado;verde escuro;; Clin., Gineco, Gener., AS, Enf., Farm, Odonto
- Assistência Médica Ambulatorial/Unidade Básica de Saúde Integrada PARQUE PAULSITANO ;R. Silveira Píres, 265 - Parque Paulistano, São Paulo - SP, 08080-160;-23.487.152;-46.432.177;AMA Integrado;verde escuro;;Clin., Gineco, Enf., Farm, Odonto
-Estratégia Saúde da Família (UBS) CIDADE NOVA SÃO MIGUEL  ;Av. Moacir Dantas Itapicuru, 1008 - Cidade Nova São Miguel, São Paulo - SP, 08042-290;-23.504.887;-46.433.537;ESF/UBS;vermelho;;Gener., AS, Enf., Farm, Ft, EF, Fono, Nut., Psi
-Estratégia Saúde da Família (UBS) CIDADE PEDRO JOSE NUNES  ;R. José Bargas, 143 - Vila Jacui, São Paulo - SP, 08061-245;-23.501.140;-46.461.397;ESF/UBS;vermelho;;Gener., Enf., Farm, Odonto
-Estratégia Saúde da Família (UBS) DR THERSIO VENTURA  ;R. Arraial de Santa Bárbara, 996 - Vila Jacui, São Paulo - SP, 08061-360;-23.504.096;-46.470.656;ESF/UBS;vermelho;;Gener., Enf., Farm, Odonto
-Estratégia Saúde da Família (UBS) JARDIM LAPENNA  ;RUA SERRA DA JURUOCA,36, Jardim Lapena;-23.488.345;-46.448.042;ESF/UBS;vermelho;;Gener., Enf., Farm
-Estratégia Saúde da Família (UBS) JARDIM MAIA  ;RUA MARFIM VEGETAL, 108 - JARDIM MAIA;-23.492.223;-46.415.971;ESF/UBS;vermelho;;Clin., Psiq., Gineco, Gener., AS, Enf, Farm, Ft, EF, Fono, Nut., Psi, Odonto
-Estratégia Saúde da Família (UBS) NITRO OPERÁRIA - DR PAULO FELDMAN  ;RUA CUMARU, 14 - SÃO MIGUEL PAULISTA;-23.494.106;-46.436.422;ESF/UBS;vermelho;;Psiq., Gener., AS, Enf., Farm, Ft, EF, TO, Fono, Nut., Psi
-Estratégia Saúde da Família (UBS) SANTA INES  ; RUA FREI FIDELIS MOTA, 1001, SÃO MIGUEL PAULISTA;-23.492.510;-46.459.468;ESF/UBS;vermelho;;Gener., AS, Enf., Farm, Ft, EF, TO, Fono, Nut., Psi
-Estratégia Saúde da Família (UBS) UNIÃO DE VILA NOVA  ;RUA CATLÉIAS, 205, UNIÃO DE VILA NOVA, São Paulo - SP;-23.483.812;-46.459.015;ESF/UBS;vermelho;;Gener., Enf., Farm
-Unidade Básica de Saúde VILA ITAIM  ;RUA RIO MANUEL ALVES, 35 - VILA ITAIM ;-23.484.720;-46.394.980;UBS Tradicional;azul escuro;;Clin., Psiq., Gineco, AS, Enf., Farm, TO, Psi, Odonto
-Supervisão Técnica de Saúde Itaim Paulista ;Av. Marechal Tito, 3012. Itaim Paulista - 08115-000;-23.494.567;-46.417.110;STS;preto;;itaim
-Assistência Médica Ambulatorial - Especialidades Burgo Paulista;R. José Silva Alcântara Filho, 1031 - Burgo Paulista, São Paulo - SP, 03680-000;-23.523.292;-46.490.513;AMA-E;bege;;ermelindo
-Centro de Práticas Naturais ERMELINO MATARAZZO - PRIMAVERA;Rua Victória Simionato, 100 - Vila Paranaguá, São Paulo - SP, 03808-170;-23.494.490;-46.477.560;CPN;branco;;ermelindo
-Unidade Básica de Saúde Burgo Paulista;R. José Silva Alcântara Filho, 1031 - Burgo Paulista, São Paulo - SP, 03680-000;-23.523.292;-46.490.513;UBS Tradicional;azul escuro;;ermelindo
-Assistência Médica Ambulatorial/Unidade Básica de Saúde Integrada Humberto Cerruti;Av. Olavo Egídio de Souza Aranha, 704 - Parque Cisper, São Paulo - SP, 03821-080;-23.502.204;-46.493.883;AMA Integrado;verde escuro;;ermelindo
-Serviço de Assistência Especializada DST/AIDS Fidelis Ribeiro;R. Peixoto, 100 - Vila Fidelis Ribeiro, São Paulo - SP, 03627-010;-23.511.517;-46.505.277;SAE-DST;rosa;;ermelindo
-Assistência Médica Ambulatorial/Unidade Básica de Saúde Integrada JARDIM POPULAR ;Rua Jaime Torres, 600 - Jardim Popular, São Paulo - SP, 03670-010;-23.517.765;-46.506.400;AMA Integrado;verde escuro;;ermelindo
-Unidade Básica de Saúde Jardim Penha;Av. São Miguel, 3721 - Vila Rio Branco, São Paulo - SP;-23.509.682;-46.497.167;UBS Tradicional;azul escuro;;ermelindo
-Núcleo Integrado de Reabilitação LAR VICENTINO;R. Ovídio Lopes, 253 - Parque Boturussu, São Paulo - SP, 03804-110;-23.497.916;-46.481.871;NIR;vinho;;ermelindo
-Estratégia Saúde da Família (UBS) Dr. Pedro de Souza Campos;R. Paulo Bifano Alves, 764 - Ermelino Matarazzo, São Paulo - SP, 03801-000;-23.503.085;-46.484.074;ESF/UBS;vermelho;;ermelindo
-Estratégia Saúde da Família (UBS) COSTA MELO;R. Luís Asson, 165 - Pte. Rasa, São Paulo - SP, 03624-010;-23.512.776;-46.513.887;ESF/UBS;vermelho;;ermelindo
-Centro de Atenção Psicossocial Álcool Drogas II - ERMELINO MATARAZZO;Rua João Antônio Andrade, 804   Pq. Boturussu;-23.500.917;-46.479.056;CAPS;amarelo;;ermelindo
-Estratégia Saúde da Família (UBS) VILA CISPER;Rua Caculé, 79 - Parque Cisper, São Paulo - SP, 03817-220;-23.489.745;-46.491.510;ESF/UBS;vermelho;;ermelindo
-Unidade Básica de Saúde ERMELINO MATARAZZO;R. Antônio de Freitas Tolêdo, 185 - Jardim Belem, São Paulo - SP, 03809-060;-23.489.181;-46.476.618;UBS Tradicional;azul escuro;;ermelindo
-Programa Acompanhante de Idosos - ERMELINO MATARAZZO;R. Antônio de Freitas Tolêdo, 185 - Jardim Belem, São Paulo - SP, 03809-060;-23.489.181;-46.476.618;PAI;azul claro;;ermelindo
-Unidade Básica de Saúde Carlos Olivaldo de Souza Lopes Muniz;R. Bartolomeu Soares, 16 - Jardim Pte. Rasa, São Paulo - SP, 68515-000;-23.513.768;-46.482.810;UBS Tradicional;azul escuro;;ermelindo
-Centro de Atenção Psicossocial ADULTO II - ERMELINO MATARAZZO;Av. Boturussu, 168 - Parque Boturussu, São Paulo - SP, 03802-000;-23.505.952;-46.488.307;CAPS;amarelo;;ermelindo
-Assistência Médica Ambulatorial/Unidade Básica de Saúde Integrada JARDIM TRÊS MARIAS - DR MAURICIO ZAMIJOVSCKY;R. Breno Aciole, 19 - Jardim Tres Marias, São Paulo - SP, 03676-040;-23.521.570;-46.494.918;AMA Integrado;verde escuro;;ermelindo
-Ambulatório de Especialidades VILA PARANAGUÁ;Rua José Goes Nogueira, 70 - Vila Paranagua, São Paulo - SP, 03807-380;-23.494.940;-46.474.189;AE;bege;;ermelindo
-Centro de Convivência e Cooperativa (CECCO) Ermelino Matarazzo;Alameda Rodrigo de Brum, 70 (antigo 36) - Ermelino Matarazzo, São Paulo - SP, 03649-030;-23.500.745;-46.472.900;CECCO;roxo;;ermelindo
-Estratégia Saúde da Família (UBS) JARDIM KERALUX;R. Lucas Gonçalves, 13 - Jardim Keralux, São Paulo - SP, 03828-060;-23.482.374;-46.493.309;ESF/UBS;vermelho;;ermelindo
-Centro de Referência de Assistência Social - Ermelino Matarazzo;Av. Paranaguá, 1492 - Vila Paranagua, São Paulo - SP, 03806-000;-23.493.033;-46.478.455;CRAS;laranja;;ermelindo
-Lar Vicentino - Ermelino Matarazzo (ILPI);R. Ovídio Lopes, 253 - Parque Boturussu, São Paulo - SP, 03804-110;-23.497.916;-46.481.871;ILPI;marrom;;ermelindo
-Unidade Básica de Saúde VILA PROGRESSO;R. Real Horto, 115 - Vila Progresso (Zona Leste), São Paulo - SP, 08245-260;-23.514.943;-46.432.872;UBS Tradicional;azul escuro;;saomiguel
-Unidade Básica de Saúde VILA JACUI;R. Édipo Felíciano, 165 - Vila Jacui, São Paulo - SP, 08060-220;-23.502.562;-46.450.040;UBS Tradicional;azul escuro;;saomiguel
-Programa Acompanhante de Idosos - Vila Jacuí;Rua Édipo Feliciano, 51, Vila Jacui, São Paulo - SP, 08060-220;-23.501.688;-46.449.687;PAI;azul claro;;saomiguel
-Unidade Básica de Saúde JARDIM DAS CAMELIAS;R. Trevo de Santa Maria, 79 - Jardim das Camelias, São Paulo - SP, 08050-570;-23.520.203;-46.461.692;UBS Tradicional;azul escuro;;saomiguel
- Assistência Médica Ambulatorial/Unidade Básica de Saúde Integrada JARDIM HELENA;Av. Kumaki Aoki, 785 - Jardim Helena, São Paulo - SP, 08090-370;-23.479.260;-46.419.651;AMA Integrado;verde escuro;;saomiguel
- Assistência Médica Ambulatorial/Unidade Básica de Saúde Integrada SITIO DA CASA PINTADA;RUA MARIA SANTANA, 101 VILA JACUI;-23.510.126;-46.446.666;AMA Integrado;verde escuro;;saomiguel
- Assistência Médica Ambulatorial/Unidade Básica de Saúde Integrada PARQUE PAULSITANO;R. Silveira Píres, 265 - Parque Paulistano, São Paulo - SP, 08080-160;-23.487.152;-46.432.177;AMA Integrado;verde escuro;;saomiguel
-Estratégia Saúde da Família (UBS) CIDADE NOVA SÃO MIGUEL;Av. Moacir Dantas Itapicuru, 1008 - Cidade Nova São Miguel, São Paulo - SP, 08042-290;-23.504.887;-46.433.537;ESF/UBS;vermelho;;saomiguel
-Estratégia Saúde da Família (UBS) CIDADE PEDRO JOSE NUNES;R. José Bargas, 143 - Vila Jacui, São Paulo - SP, 08061-245;-23.501.140;-46.461.397;ESF/UBS;vermelho;;saomiguel
-Estratégia Saúde da Família (UBS) DR THERSIO VENTURA;R. Arraial de Santa Bárbara, 996 - Vila Jacui, São Paulo - SP, 08061-360;-23.504.096;-46.470.656;ESF/UBS;vermelho;;saomiguel
-Estratégia Saúde da Família (UBS) JARDIM LAPENNA;RUA SERRA DA JURUOCA,36, Jardim Lapena;-23.488.345;-46.448.042;ESF/UBS;vermelho;;saomiguel
-Estratégia Saúde da Família (UBS) JARDIM MAIA;RUA MARFIM VEGETAL, 108 - JARDIM MAIA;-23.492.223;-46.415.971;ESF/UBS;vermelho;;saomiguel
-Estratégia Saúde da Família (UBS) NITRO OPERÁRIA - DR PAULO FELDMAN;RUA CUMARU, 14 - SÃO MIGUEL PAULISTA;-23.494.106;-46.436.422;ESF/UBS;vermelho;;saomiguel
-Estratégia Saúde da Família (UBS) SANTA INES; RUA FREI FIDELIS MOTA, 1001, SÃO MIGUEL PAULISTA;-23.492.510;-46.459.468;ESF/UBS;vermelho;;saomiguel
-Estratégia Saúde da Família (UBS) UNIÃO DE VILA NOVA;RUA CATLÉIAS, 205, UNIÃO DE VILA NOVA, São Paulo - SP;-23.483.812;-46.459.015;ESF/UBS;vermelho;;saomiguel
-Unidade Básica de Saúde VILA ITAIM;RUA RIO MANUEL ALVES, 35 - VILA ITAIM ;-23.484.720;-46.394.980;UBS Tradicional;azul escuro;;saomiguel
-
