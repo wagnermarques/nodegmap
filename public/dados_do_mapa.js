@@ -46,6 +46,7 @@ require([
             let endDoLocal = aRowColumns[1];
             let latitude = aRowColumns[2];
             let longitude = aRowColumns[3];
+            let especialidades = aRowColumns[7];
             let position;
             dadosDoLocal.nomeDoLocal = nomeDoLocal;
             dadosDoLocal.endDoLocal = endDoLocal;
@@ -62,6 +63,7 @@ require([
 
             dadosDoLocal.tipo = aRowColumns[4];
             dadosDoLocal.cor =  aRowColumns[5];
+            dadosDoLocal.especialidades = especialidades;
             locais.push(dadosDoLocal);
         });//rows.forEach
         
@@ -74,6 +76,7 @@ require([
             '<div id="bodyContent">'+
             '<p>${endereco}<p>'+
             '<p>${tipo}</p>'+
+            '<p><strong>Especialidades</strong>:${especialidades}</p>'+
             '</div>'+
             '</div>';
         
@@ -86,7 +89,8 @@ require([
                                                {
                                                    endereco:local.endDoLocal,
                                                    nome:local.nomeDoLocal,
-                                                   tipo:local.tipo
+                                                   tipo:local.tipo,
+                                                   especialidades: local.especialidades
                                                })
                 });
                 var marker = new google.maps.Marker({
