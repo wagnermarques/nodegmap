@@ -136,6 +136,23 @@ define(["dijit/Dialog","dojo/ready"],function(dialog,ready){
                 clearMarkers();
                 setMapMarkersByCategorias(map,"ILPI");
             });
+	    registry.byId("Parque").on("click", function(){
+                clearMarkers();
+                setMapMarkersByCategorias(map,"Parque");
+            });
+	    registry.byId("CEU").on("click", function(){
+                clearMarkers();
+                setMapMarkersByCategorias(map,"CEU");
+            });
+	    registry.byId("Mercado").on("click", function(){
+                clearMarkers();
+                setMapMarkersByCategorias(map,"Mercado");
+            });
+	    registry.byId("NCI").on("click", function(){
+                clearMarkers();
+                setMapMarkersByCategorias(map,"NCI");
+            });
+	    
 //            registry.byId("mnuItem_SelecionarLocaisPorRegiao").on("click", function(){
 //
       //      });
