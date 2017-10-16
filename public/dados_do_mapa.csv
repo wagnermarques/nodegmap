@@ -49,7 +49,7 @@ ESPAÇO ALANA;Rua Erva do Sereno, 642, Jardim Pantanal, São Paulo;-23.483.963;-
 Centro de Referência de Assistência Social (CRAS);Rua Dr. José Guilherme Eiras, 182, São Miguel Paulista, São Paulo;-23.497.328;-46.439.464;CRAS;laranja;;Acolhe e encaminha
 AMBULATÓRIO HORA CERTA;Rua Professor Antônio Gama de Cerqueira, 347, São Miguel Paulista, São Paulo;-23.496.854;-46.440.865;Hospital Dia;verde claro;;Gineco, Uro, Neuro, Orto, Otorrino, Cardio, Pneumo, Cir. Geral, Cir. Ped., Endocrino, Angio, Dermato, Reumato, AS, Enf., Farm, Fono
 DAVÓ HIPERMERCADO;AV. SÃO MIGUEL, 8400 – VILA JACUÍ, SÃO PAULO.;-23.498.682;-46.455.114;Mercado;;;Ginast., Along.
-Parque Jacuí;Rua Catléia,911 - união de Vl. Nova - São Paulo ;-23.487.946;-46.455.016;parque;;;Pista caminhada, Dança
+Parque Jacuí;Rua Catléia,911 - união de Vl. Nova - São Paulo ;-23.487.946;-46.455.016;Parque;;;Pista caminhada, Dança
 Centro Educacional Unificado (CEU) Pq. Veredas -;Rua Daniel Muller, 347 - São Miguel Pta;-23.513.256;-46.389.861;CEU;;;Dança, Hidrog., Natação, Artesanato, Tai Chi Chuan
 Centro Educacional Unificado (CEU) Azul da cor do Mar;Av. Ernesto Souza Cruz,2171- Cid. A.E.Carv-Jd.União Vl. Nova;-23.521.930;-46.457.093;CEU;;;Dança, Volei, Hidrog.
 NCI Santo Anotnio;Rua Guapuruvu , 11a  Jd Lucinda- São Miguel Paulista;-23.516.587;-46.442.371;NCI;;;Dança Senior, Ginast., Pintura, Artesanato, Hip Hop, Dança Contemporânea, Lian Gong
@@ -62,9 +62,9 @@ Centro de Convivência e Cooperativa Parque Santa Amelia  ;Rua Timóteo Correia 
 Centro de Testagem e Aconselhamento DST/AIDS DR. SERGIO AROUCA  ;R. Valente de Novais, 131 - Itaim Paulista, São Paulo - SP, 08120-420;-23.501.252;-46.396.645;CTA;rosa;;AS, Enf., Ft, Psi
  HOSPITAL DIA DA REDE HORA CERTA ITAIM PAULISTA  ;Avenida Marechal Tito, 6577 - Itaim Paulista, São Paulo - SP, 08115-100;-23.488.942;-46.385.905;Hospital Dia;verde claro;;Gineco, Uro, Neuro, Orto, Otorrino, Cardio, Pneumo, Cir. Geral, Cir. Ped., Endocrino, Angio, Dermato, Reumato, AS, Enf., Farm, Fono
 Pronto Atendimento Municipal DR ATUALPA GIRÃO RABELO  ;R. Ilha do Arvoredo, 10 - JARDIM CAMARGO VELHO, São Paulo - SP, 08140-270;-23.508.854;-46.398.037;PA;pink;;Clin.(22), Pediat.(11), AS, Enf., Farm, Odonto
-Serviço Residencial Terapêutico I Masculino  ;Rua Cembira, 954 - Vila Curuçá Velha, São Paulo - SP, 08030-050;-23.504.628;-46.428.975;Residência Terapêutica;lilás;;Cuidad.
+Serviço Residencial Terapêutico I Masculino  ;Rua Cembira, 954 - Vila Curuçá Velha, São Paulo - SP, 08030-050;-23.504.628;-46.428.975;Residencia Terapeutica;lilás;;Cuidad.
 Estratégia Saúde da Família (UBS) CIDADE KEMEL  ;Av. Kemel Adas, 1031 - Cidade Kemel, São Paulo - SP, 08130-485;-23.505.417;-46.366.592;ESF/UBS;vermelho;;Gener.(4), AS, Enf., Farm, Ft, EF, TO, Nut., Psi, Odonto
-Serviço Residencial Terapêutico Misto;Rua Barena, 289, Itaim Paulista;-23.498.188;-46.404.114;Residência Terapêutica;lilás;;
+Serviço Residencial Terapêutico Misto;Rua Barena, 289, Itaim Paulista;-23.498.188;-46.404.114;Residencia Terapeutica;lilás;;
 Estratégia Saúde da Família (UBS) DOM JOAO NERY  ;Estrada Dom João Nery, 3462 - Vila Lourdes, São Paulo - SP, 08452-340;-23.528.688;-46.397.179;ESF/UBS;vermelho;;Clin.(4), Gener.(6), AS, Enf., Farm, Ft, TO, Fono, Nut., Psi, Odonto
 Estratégia Saúde da Família (UBS) DR. ATUALPA GIRÃO RABELO  ;R. Ilha do Arvoredo, 10 - JARDIM CAMARGO VELHO, São Paulo - SP, 08140-270;-23.508.854;-46.398.037;ESF/UBS;vermelho;;Clin.(1), Gineco (1), Gener.(3), Pediat.(1), Enf., Farm, Ft, TO, Fono, Nut., Psi 
 Unidade Básica de Saúde Itaim Paulista JULIO DE GOUVEIA  ;Praça Major José Levy Sobrinho, 139 - Itaim Paulista, São Paulo - SP, 08110-460;-23.494.356;-46.400.441;UBS Tradicional;azul escuro;;Clin.(1), Gineco (3), Gener.(1), Oftalmo, AS, Enf., Odonto

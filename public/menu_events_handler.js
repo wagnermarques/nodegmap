@@ -78,7 +78,7 @@ define(["dijit/Dialog","dojo/ready"],function(dialog,ready){
             });
 	    registry.byId("SUVIS").on("click", function(){
                 clearMarkers();
-                setMapMarkersByCategorias(map,"SUVIS");
+                setMapMarkersByCategorias(map,"UVIS");
             });
 	    registry.byId("CRAS").on("click", function(){
                 clearMarkers();
@@ -152,7 +152,15 @@ define(["dijit/Dialog","dojo/ready"],function(dialog,ready){
                 clearMarkers();
                 setMapMarkersByCategorias(map,"NCI");
             });
-	    
+	    registry.byId("CDI").on("click", function(){
+		clearMarkers();
+		setMapMarkersByCategorias(map,"CDI");
+	    }); 
+            registry.byId("Hospital").on("click", function(){
+                clearMarkers();
+                setMapMarkersByCategorias(map,"Hospital");
+            });
+
 //            registry.byId("mnuItem_SelecionarLocaisPorRegiao").on("click", function(){
 //
       //      });
