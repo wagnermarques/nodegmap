@@ -4,7 +4,7 @@ require([
 
 	
 	//Limpando o SearchBox
-	document.getElementById("search_map1").value= "hhhrh";
+	document.getElementById("search_map1").value= "";
 	document.getElementById("search_map2").value= "";
 	
         //PLOTANDO O IPGG
@@ -90,7 +90,7 @@ require([
             '<p>${tipo}</p>'+
             '<p><strong>Especialidades</strong>:${especialidades}</p>'+
 			'<button onclick="setSearchBox01(\'${endId}\')">Definir como saída</button>'+
-			'<button onclick="setSearchBox02()">Definir como chegada</button>'+
+			'<button onclick="setSearchBox02(\'${endId}\')">Definir como chegada</button>'+
             '</div>'+
             '</div>';
        
@@ -251,48 +251,93 @@ require([
           });	  
         });
 		
-
-        return map;  
+		var input1 = document.getElementById('search_map1');
+		var searchBox = new google.maps.places.SearchBox(input1);
 		
- });
+        map.addListener('bounds_changed', function() {
+          searchBox.setBounds(map.getBounds());
+		 
+		});
+		
+		searchBox.addListener('places_changed', function() {
+          var places = searchBox.getPlaces();
+
+		  var bounds = new google.maps.LatLngBounds();
+          places.forEach(function(place) {
+             if (place.geometry.viewport) {
+              // Only geocodes have viewport.
+              bounds.union(place.geometry.viewport);
+            } else {
+              bounds.extend(place.geometry.location);
+            }
+          });
+          map.fitBounds(bounds);
+		  console.log('address searchBox 1 '+input.value);
+          geocoder.geocode({address: input1.value}, function(results, status) {
+			  console.log('lat'+results[0].geometry.location.lat());	
+			  console.log('lng'+results[0].geometry.location.lng());	
+			  
+			  var markSerchbox1 = new google.maps.Marker({
+				map: map,
+				position: results[0].geometry.location
+				});
+          });	  
+        });
+
+	return map;  
+		
+});
  
- function setSearchBox1() {
+//funcao para definir no searchBox de partida (search_map1) o endereco do IPGG 
+function setSearchBox1() {
 	var geocoder = new google.maps.Geocoder();
 	console.log("working  function setSearchBox1");
 	//console.log("setSearchBox1 lat: "+LatLngIpgg.lat+ " , lng: "+LatLngIpgg.lng);
 	
 	//geocoder.geocode{'location': LatLngIpgg}, function(results, status){
-	//console.log(status);
-	//console.log ("geocode"+ results[0].formatted_address);
-	
-	//};
+	//console.log ("geocode"+ results[0].formatted_address);};
 	
 	var address1 = document.getElementById("addressIPGG").innerHTML;
 	document.getElementById("search_map1").value= address1;
 
 };
  
- function setSearchBox2() {
-	//var geocoder = new google.maps.Geocoder();
+ 
+//funcao para definir no searchBox de partida (search_map1) o endereco do IPGG 
+function setSearchBox2() {
+	 
 	console.log("working function setSearchBox2");
-	//console.log("setSearchBox1 lat: "+LatLngIpgg.lat+ " , lng: "+LatLngIpgg.lng);
 	
 	var address2 = document.getElementById("addressIPGG").innerHTML;
 	document.getElementById("search_map2").value= address2;
 };
- 
+
+
+//funcao para definir no searchBox de partida (search_map1) o endereco do local 
+// id -> lat + lng (concatenado)
 function setSearchBox01(id) {
-	console.log(id);
 	
-	var geocoder = new google.maps.Geocoder();
 	console.log("working function setSearchBox01");
-	
-	var address3 = document.getElementById(id).innerHTML;
-	console.log(address3);
-	document.getElementById("search_map1").value= address3	;
+	console.log("setSearchBox01 - id: "+id);
 	
 	
-}
+	var address01 = document.getElementById(id).innerHTML;
+	console.log("setSearchBox01 - address01: "+address01);
+	
+	document.getElementById("search_map1").value= address01;	
+};
 
- 
 
+//funcao para definir no searchBox de chegada (search_map2) o endereco do local 
+// id -> lat + lng (concatenado)
+function setSearchBox02(id) {
+	
+	console.log("working function setSearchBox02");
+	console.log("setSearchBox02 - id: "+id);	
+	
+	var address02 = document.getElementById(id).innerHTML;
+	console.log("setSearchBox02 - address02: "+address02);
+	
+	document.getElementById("search_map2").value= address02;
+	
+};
