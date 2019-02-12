@@ -2,8 +2,14 @@ require([
     'dojo/text!./dados_do_mapa.csv',
     'dojo/string'], function (dados,string) {
 
+	
+	//Limpando o SearchBox
+	document.getElementById("search_map1").value= "hhhrh";
+	document.getElementById("search_map2").value= "";
+	
         //PLOTANDO O IPGG
         LatLngIpgg = {lat: -23.4918588, lng: -46.44605790000003};
+		var geocoder = new google.maps.Geocoder();
 
         infoWindowContentIpgg = '<div id="content">'+
             '<div id="siteNotice">'+
@@ -13,19 +19,22 @@ require([
             '<table>'+
             '<tr>'+
             '<td> <img src="./img/logo.jpg"></td>'+
-            '<td> Pra&ccedil;a Padre Aleixo Monteiro Mafra, 34 - S&atilde;o Miguel Paulista"</td>'+
+            '<td id= "addressIPGG"> Praça Padre Aleixo Monteiro Mafra, 34 - São Miguel Paulista</td>'+
             '</tr>'+
             '</table>'+
-            '<p>www.ipgg.saude.sp.gov.br</p>'+
+            '<a href="http://www.saude.sp.gov.br/instituto-paulista-de-geriatria-e-gerontologia-ipgg-jose-ermirio-de-moraes/">http://www.saude.sp.gov.br/instituto-paulista-de-geriatria-e-gerontologia-ipgg-jose-ermirio-de-moraes/</a>'+
+			'<button onclick="setSearchBox1(LatLngIpgg)">Definir como saída</button>'+
+			'<button onclick="setSearchBox2(LatLngIpgg)">Definir como chegada</button>'+
             '</div>'+
             '</div>';
 
+			
         var infowindow = new google.maps.InfoWindow({
             content: infoWindowContentIpgg
         });
         map = new google.maps.Map(document.getElementById('map'), {
             center: LatLngIpgg,
-            zoom: 12,            
+            zoom: 13,            
         });    
         var marker = new google.maps.Marker({
             position: LatLngIpgg,
@@ -35,7 +44,7 @@ require([
         marker.addListener('click', function() {
             infowindow.open(map, marker);
         });
-    
+		
 
         //OBTENDO DADOS DOS DEMAIS LOCAIS PARA PLOTAGEM        
         var rows = dados.split("\n");
@@ -69,29 +78,43 @@ require([
         
 
         //PLOTANDO DEMAIS LOCAIS
-        infoWindowContent = '<div id="content">'+
+			//console.log("$endereco:  "${endereco}.innerHTML);
+			//var address01 = local.endDoLocal;
+			
+			infoWindowContent = '<div id="content">'+
             '<div id="siteNotice">'+
             '</div>'+
             '<h1 id="firstHeading" class="firstHeading">${nome}</h1>'+
             '<div id="bodyContent">'+
-            '<p>${endereco}<p>'+
+            '<p id="${endId}">${endereco}<p>'+
             '<p>${tipo}</p>'+
             '<p><strong>Especialidades</strong>:${especialidades}</p>'+
+			'<button onclick="setSearchBox01(\'${endId}\')">Definir como saída</button>'+
+			'<button onclick="setSearchBox02()">Definir como chegada</button>'+
             '</div>'+
             '</div>';
-        
+       
+	   var NLocal = 0;
         locais.forEach(function(local){
+			
+			NLocal= NLocal+1;
             if(local.latitude == null || local.longitude == null || isNaN(local.position.lat) || isNaN(local.position.lng)){
                 //console.log(local.nomeDoLocal +" nao pode ser plotado");
             }else{
-                var infowindow = new google.maps.InfoWindow({
-                    content: string.substitute(infoWindowContent,
+				var latlngid= local.position.lat.toString()+local.position.lng.toString();
+				var localInfoWindowContent = string.substitute(infoWindowContent,
                                                {
                                                    endereco:local.endDoLocal,
                                                    nome:local.nomeDoLocal,
                                                    tipo:local.tipo,
-                                                   especialidades: local.especialidades
-                                               })
+                                                   especialidades: local.especialidades,
+												   endId:local.position.lat.toString() +local.position.lng.toString()
+												   
+                                               });
+                var infowindow = new google.maps.InfoWindow({
+                    content: localInfoWindowContent,
+				
+					maxWidth: 180
                 });
                 var marker = new google.maps.Marker({
                     position: {lat: local.latitude, lng: local.longitude},
@@ -177,13 +200,99 @@ require([
 
 
                 
-                marker.addListener('click', function() {
+                google.maps.event.addListener(marker,'click', function() {
+					
                     infowindow.open(map, marker);
+					
                 });
+				 
             }//else
         });//forEach de plotagem
+	
+	
+		// procurar endereco
+		
+	    var input = document.getElementById('search_map2');
+		var searchBox = new google.maps.places.SearchBox(input);
+		
+        map.addListener('bounds_changed', function() {
+          searchBox.setBounds(map.getBounds());
+		 
+		});
+		
+		searchBox.addListener('places_changed', function() {
+          var places = searchBox.getPlaces();
 
-        return map;
-                                            
+		  //if (places.length == 0) {
+          //  return;
+          //}
+
+		  
+		  var bounds = new google.maps.LatLngBounds();
+		 // console.log("bounds"+bounds);
+          places.forEach(function(place) {
+             if (place.geometry.viewport) {
+              // Only geocodes have viewport.
+              bounds.union(place.geometry.viewport);
+            } else {
+              bounds.extend(place.geometry.location);
+            }
+          });
+          map.fitBounds(bounds);
+		  console.log('address searchBox 2 '+input.value);
+          geocoder.geocode({address: input.value}, function(results, status) {
+			  console.log('lat'+results[0].geometry.location.lat());	
+			  console.log('lng'+results[0].geometry.location.lng());	
+			  
+			  var markSerchbox2 = new google.maps.Marker({
+				map: map,
+				position: results[0].geometry.location
+				});
+          });	  
+        });
+		
+
+        return map;  
+		
  });
+ 
+ function setSearchBox1() {
+	var geocoder = new google.maps.Geocoder();
+	console.log("working  function setSearchBox1");
+	//console.log("setSearchBox1 lat: "+LatLngIpgg.lat+ " , lng: "+LatLngIpgg.lng);
+	
+	//geocoder.geocode{'location': LatLngIpgg}, function(results, status){
+	//console.log(status);
+	//console.log ("geocode"+ results[0].formatted_address);
+	
+	//};
+	
+	var address1 = document.getElementById("addressIPGG").innerHTML;
+	document.getElementById("search_map1").value= address1;
+
+};
+ 
+ function setSearchBox2() {
+	//var geocoder = new google.maps.Geocoder();
+	console.log("working function setSearchBox2");
+	//console.log("setSearchBox1 lat: "+LatLngIpgg.lat+ " , lng: "+LatLngIpgg.lng);
+	
+	var address2 = document.getElementById("addressIPGG").innerHTML;
+	document.getElementById("search_map2").value= address2;
+};
+ 
+function setSearchBox01(id) {
+	console.log(id);
+	
+	var geocoder = new google.maps.Geocoder();
+	console.log("working function setSearchBox01");
+	
+	var address3 = document.getElementById(id).innerHTML;
+	console.log(address3);
+	document.getElementById("search_map1").value= address3	;
+	
+	
+}
+
+ 
 
